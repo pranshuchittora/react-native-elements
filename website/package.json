@@ -18,6 +18,17 @@
     "@docusaurus/preset-classic": "^2.0.0-alpha.59",
     "prism-react-renderer": "^1.1.1",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-native": "^0.63.2",
+    "react-native-elements": "../",
+    "react-native-vector-icons": "^7.1.0",
+    "react-native-web": "^0.13.13"
+  },
+  "devDependencies": {
+    "babel-plugin-react-native-web": "^0.13.13",
+    "buffer": "^5.6.0",
+    "file-loader": "^6.1.0",
+    "metro-react-native-babel-preset": "^0.63.0",
+    "url-loader": "^4.1.0"
   }
 }

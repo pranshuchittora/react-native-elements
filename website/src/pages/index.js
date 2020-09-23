@@ -30,12 +30,10 @@ Button.defaultProps = {
   target: '_self',
 };
 
-const Block = props => (
+const Block = (props) => (
   <section className="margin-vert--xl">
     <div className="container">
-      <div className="row">
-        {props.children}
-      </div>
+      <div className="row">{props.children}</div>
     </div>
   </section>
 );
@@ -51,8 +49,8 @@ const OpenCollective = () => (
       <p className="subtitle">Built with passion, backed by the community</p>
 
       <p>
-        Open Collective is an initiative that allows community members an easy and
-        transparent way to donate to open source projects. <br />
+        Open Collective is an initiative that allows community members an easy
+        and transparent way to donate to open source projects. <br />
       </p>
     </div>
     <div className="backers-section text--center">
@@ -113,56 +111,72 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout title={siteConfig.title} description={siteConfig.tagline}>
-      <header className="hero text--center">
-        <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
+    <React.Fragment>
+      {/*<style type="text/css">{`
+    @font-face {
+      font-family: 'MaterialIcons';
+      src: url(${require('react-native-vector-icons/Fonts/MaterialIcons.ttf')}) format('truetype');
+    }
 
-          <div>
-            <Link
-              className={clsx(
-                'button button--secondary button--outline button--lg margin-right--sm',
-                styles.heroButton
-              )}
-              style={{color: 'white'}}
-              to={useBaseUrl('/docs')}
-            >
-              Read docs
-            </Link>
+    @font-face {
+      font-family: 'FontAwesome';
+      src: url(${require('react-native-vector-icons/Fonts/FontAwesome.ttf')}) format('truetype');
+    }
+    @font-face {
+      font-family: 'MaterialCommunityIcons';
+      src: url(${require('react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf')}) format('truetype');
+    }
+  `}</style>*/}
 
-            <Link
-              className={clsx(
-                'button button--secondary button--outline button--lg',
-                styles.heroButton
-              )}
-              style={{color: 'white'}}
-              to={
-                'https://expo.io/@flyingcircle/react-native-elements-app'
-              }
-            >
-              Try the demo app
-            </Link>
-          </div>
-        </div>
-      </header>
-
-      {features && features.length && (
-        <section className="margin-vert--xl">
+      <Layout title={siteConfig.title} description={siteConfig.tagline}>
+        <header className="hero text--center">
           <div className="container">
-            <div className="row">
-              {features.map(({ title, description }, i) => (
-                <div key={i} className="col col--3">
-                  <h3>{title}</h3>
-                  <p className="margin--none">{description}</p>
-                </div>
-              ))}
+            <h1 className="hero__title">{siteConfig.title}</h1>
+            <p className="hero__subtitle">{siteConfig.tagline}</p>
+
+            <div>
+              <Link
+                className={clsx(
+                  'button button--secondary button--outline button--lg margin-right--sm',
+                  styles.heroButton
+                )}
+                style={{ color: 'white' }}
+                to={useBaseUrl('/docs')}
+              >
+                Read docs
+              </Link>
+
+              <Link
+                className={clsx(
+                  'button button--secondary button--outline button--lg',
+                  styles.heroButton
+                )}
+                style={{ color: 'white' }}
+                to={'https://expo.io/@flyingcircle/react-native-elements-app'}
+              >
+                Try the demo app
+              </Link>
             </div>
           </div>
-        </section>
-      )}
-      <OpenCollective />
-    </Layout>
+        </header>
+
+        {features && features.length && (
+          <section className="margin-vert--xl">
+            <div className="container">
+              <div className="row">
+                {features.map(({ title, description }, i) => (
+                  <div key={i} className="col col--3">
+                    <h3>{title}</h3>
+                    <p className="margin--none">{description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+        <OpenCollective />
+      </Layout>
+    </React.Fragment>
   );
 }
 

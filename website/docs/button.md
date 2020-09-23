@@ -3,6 +3,10 @@ id: button
 title: Button
 ---
 
+import Playground from './playground-and-showcase/Button/index.jsx'
+
+  <Playground/>
+
 Buttons are touchable elements used to interact with the screen. They may
 display text, icons, or both. Buttons can be styled with several props to look a
 specific way.

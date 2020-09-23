@@ -1,13 +1,25 @@
-
 /**
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-  
-  .heroButton {
-    color: #fff !important;
-  }
-  
-  .heroButton:hover {
-    color: #2089dc !important;
-  }
+.heroButton {
+  color: #fff !important;
+}
+
+.heroButton:hover {
+  color: #2089dc !important;
+}
+
+@font-face {
+  font-family: 'MaterialIcons';
+  src: url('../../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf');
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf');
+}
+@font-face {
+  font-family: 'MaterialCommunityIcons';
+  src: url('../../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf');
+}
